@@ -28,4 +28,5 @@ int main(){
     default:
     printf("Wrong");
     }
+    return 0;
 }
