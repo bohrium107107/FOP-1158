@@ -4,7 +4,7 @@ int main(){
     float b;
     int c;
     printf("Enter two numbers ");
-    scanf("%d %d", &a, &b);
+    scanf("%f %f", &a, &b);
     printf("Choose\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n");
     scanf("%d", &c);
     switch (c)
