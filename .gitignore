@@ -1,7 +1,10 @@
+# Ignore Windows executables
+*.exe
+
+# Ignore Linux/macOS compiled outputs
 a.out
 *.out
-array
-array2
-first
+
+# Ignore editor config
 .vscode/
 *.exe
