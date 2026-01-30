@@ -16,7 +16,7 @@ void main() {
         c[i] = a[i] + b[i]; }
 
     printf("The resulting array c (a[i] + b[i]) is:\n");
-    for (int i=0; i<3; i++) {
+    for (int i=0; i<3; i++) { // display c
         printf("%d ", c[i]); }
     }
     
