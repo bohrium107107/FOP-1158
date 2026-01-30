@@ -7,3 +7,4 @@ a.out
 
 # Ignore editor config
 .vscode/
+*.exe
