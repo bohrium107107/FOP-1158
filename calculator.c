@@ -22,7 +22,11 @@ int main(){
     break;
 
     case 4:
-    printf("%.2f", a/b);
+    if (b == 0) {
+        printf("Don't divide by zero");
+        return 0;
+    } else {
+    printf("%.2f", a/b);}
     break;
 
     default:
