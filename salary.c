@@ -5,7 +5,7 @@
 int main() { 
     float bs, gs, ns, hra, ta, tax;
     printf("Enter base salary ");
-    sanf("%f", &bs);
+    scanf("%f", &bs);
     hra = bs * 0.10;
     ta = bs * 0.05;
     gs = bs + hra + ta;
