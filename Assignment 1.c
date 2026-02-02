@@ -1,3 +1,5 @@
+// Write a program in C to check leap year.
+
 #include <stdio.h>
 int main(){
     int a;

@@ -1,5 +1,7 @@
-//Calculate gross salary of an employee, given his base salary. Let HRA be 10% of base salary, and TA be 5% of base salary. 
-//He pays tax of 2% on the total salary. Print the gross salary and net salary of the employee.
+//Write a C Program to calculate the salary of an employee given his basic pay (taken as input 
+//from the user). Calculate gross salary of employee. Let HRA be 10 % of basic pay and TA be 
+//5% of basic pay. Let employees pay professional tax as 2% of total salary. Calculate net salary 
+//payable after deductions.
 
 #include <stdio.h>
 int main() { 
