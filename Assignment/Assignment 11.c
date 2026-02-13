@@ -3,6 +3,7 @@
 #include <math.h>
 int main() {
     long long n;
+    int cnt =0;
     printf("Enter a number: ");
     scanf("%lld",&n);
     if (n<0) {
@@ -19,13 +20,22 @@ int main() {
         fact *= i;
     }
     printf("Factorial: %lld",fact);
-
-    for (int i = 2; i<(n/2) ; i++ ){
-        if (n%i == 0) {
-            printf("Not prime")
-                }
-        else {
-            printf("Is prime")}
     
-    return 0;
+    if (n <= 1)
+        printf("%d is NOT prime", n);
+    else {
+
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0)
+                cnt++;
+        }
+
+        if (cnt > 0)
+            printf("\n%d is NOT prime", n);
+
+        else
+            printf("\n%d is prime", n);
+    }
+   return 0; 
+    
 }
