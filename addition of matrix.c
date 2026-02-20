@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main() {
-    int a[2][2], b[2][2], c[2][2], i, j;
+    float a[2][2], b[2][2], c[2][2];
+    int i, j, c;
     printf("Enter elements of 2x2 matrix row-wise:\n");
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
@@ -13,6 +14,16 @@ int main() {
             scanf("%d", &b[i][j]);
         }
     }
+
+    printf("Choose operation\n1.Sum\n2.Difference\n3.Product\n4.Quotient");
+    scanf("%d", &c);
+
+    switch(c){
+        case 1:
+
+    }
+
+
     printf("Sum of matrices is:\n");
     for (int i =0; i<2; i++) {
         for (int j =0; j<2; j++) {
