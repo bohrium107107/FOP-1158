@@ -56,7 +56,7 @@ int main() {
         printf("\n---- MATRIX OPERATIONS ----\n");
         printf("1. Addition\n");
         printf("2. Saddle Point\n");
-        printf("3. Inverse (2x2 only)\n");
+        printf("3. Inverse \n");
         printf("4. Exit\n");
         printf("Enter choice: ");
         scanf("%d", &choice);
