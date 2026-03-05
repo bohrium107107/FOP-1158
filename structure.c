@@ -8,23 +8,23 @@ struct Student
 };
 
 int main()
-{   struct Student S[3];
+{   struct Student S[2];
 
     for(int i=0; i<4 ; i++){
         printf("Enter Student name ");
         scanf("%s", S[i].name);
-    }
-    for(int i=0; i<4 ; i++){
+    //}
+    //for(int i=0; i<4 ; i++){
         printf("Enter Student roll no ");
         scanf("%d", &S[i].roll);
-    }
+    //}
 
-    for(int i=0; i<4 ; i++){
+    //for(int i=0; i<4 ; i++){
         printf("Enter Student marks 1 ");
         scanf("%d", &S[i].m1);
-    }
+   // }
 
-    for(int i=0; i<4 ; i++){
+    //for(int i=0; i<4 ; i++){
         printf("Enter Student marks 2 ");
         scanf("%d", &S[i].m2);
     }
