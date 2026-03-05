@@ -30,7 +30,7 @@ int main()
     }
 
     for(int i=0; i<4 ; i++){
-        S[i].grade = (S[i].m1 + S[i].m2)/2;
+        S[i].grade = (S[i].m1 + S[i].m2)/200;
     }
    
     for(int i=0; i<4 ; i++){
