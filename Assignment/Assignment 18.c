@@ -13,7 +13,6 @@ int main() {
     s = strlen(str1);
 
     printf("Reverse string is ");
-
     for(i = s-1; i >= 0; i--)
     {
     str[s-1-i] = str1[i];
