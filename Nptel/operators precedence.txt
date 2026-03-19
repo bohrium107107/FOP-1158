@@ -1,0 +1,98 @@
+C OPERATOR PRECEDENCE (HIGH → LOW)
+
+1. Postfix (Left → Right)
+   ()   []   ->   .   x++   x--
+
+2. Unary (Right → Left)
+   ++x   --x   +   -   !   ~   (type)   *   &   sizeof
+
+3. Multiplicative (Left → Right)
+   *   /   %
+
+4. Additive (Left → Right)
+   +   -
+
+5. Shift (Left → Right)
+   <<   >>
+
+6. Relational (Left → Right)
+   <   <=   >   >=
+
+7. Equality (Left → Right)
+   ==   !=
+
+8. Bitwise AND (Left → Right)
+   &
+
+9. Bitwise XOR (Left → Right)
+   ^
+
+10. Bitwise OR (Left → Right)
+    |
+
+11. Logical AND (Left → Right)
+    &&
+
+12. Logical OR (Left → Right)
+    ||
+
+13. Ternary (Right → Left)
+    ? :
+
+14. Assignment (Right → Left)
+    =   +=   -=   *=   /=   %=   <<=   >>=   &=   ^=   |=
+
+15. Comma (Left → Right)
+    ,
+
+   
+   
+   3 >= 4 == 4 < 8
+  
+   <, <=, >, >= → higher
+   ==, != → lower
+
+      (3 >= 4) == (4 < 8)
+      3 >= 4   → 0   (false)
+      4 < 8   → 1   (true)
+      0 == 1   → 0  (false)
+      FALSE
+
+
+Logical OPERATOR
+&& logical AND
+|| logical OR
+!  logical not 
+
+PRECEDENCE is left to Right
+logical operators are lower than relational operators
+&& is higher than ||
+
+
+PREFIX and Postfix
+PREFIX vs POSTFIX  x = ++a
+PREFIX vs POSTFIX  x = a++ 
+
+┌────────────┬──────────────────────────────┬──────────────────────┬──────────────┬──────────────┐
+│ Operator   │ What you say                 │ What happens first   │ Value used   │ Final value  │
+├────────────┼──────────────────────────────┼──────────────────────┼──────────────┼──────────────┤
+│ a++        │ "Take photo, then update"    │ 📸 Photo             │ OLD value    │ a becomes +1 │
+│ ++a        │ "Update, then take photo"    │ 🔄 Update            │ NEW value    │ a becomes +1 │
+└────────────┴──────────────────────────────┴──────────────────────┴──────────────┴──────────────┘
+                                                value of X
+
+TERNARY OPERATOR
+condition ? expression_if_true : expression_if_false;
+int a = 10, b = 20, max;
+
+max = (a > b) ? a : b;
+printf("The larger number is: %d\n", max);
+
+
+BITWISE OPERATOR
+AND (&): Sets bits to 1 if both are 1.
+OR (|): Sets bits to 1 if at least one is 1.
+XOR (^): Sets bits to 1 if the bits differ.
+NOT (~): A unary operator that inverts all bits.
+Left Shift (<<): Moves bits to the left.
+Right Shift (>>): Moves bits to the right.
