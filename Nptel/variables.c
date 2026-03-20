@@ -16,7 +16,6 @@ int main() {
     // String (character array)
     char stringVar[] = "Hello, C!";
 
-    // Print the values and sizes of the variables
     printf("Integer:\n");
     printf("  Value: %d\n", intVar);
     printf("  Size: %zu bytes\n\n", sizeof(intVar)); //use zu for sizeof function
