@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    signed int signedVar = -100;   // Signed integer can hold negative values
-    unsigned int unsignedVar = 100; // Unsigned integer can only hold non-negative values
+    signed int signedVar = -100;  
+    unsigned int unsignedVar = 100; 
 
     printf("Signed Integer:\n");
     printf("  Value: %d\n", signedVar);
