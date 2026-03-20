@@ -18,7 +18,7 @@ void checkScholarship(int marks[], int n) {
 
     printf("average = %.2f\n", avg);
 
-    // check conditions
+    
     if (avg >= 75 && fail == 0) {
         printf("you got a scholarship\n");
     } else {
