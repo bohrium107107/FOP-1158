@@ -1,5 +1,6 @@
 //Write a program in C to perform basic operations such as addition, saddle point, inverse, magic 
 //square of two matrices. 
+//saddle point, inverse, magic square not done yet
 
 #include <stdio.h>
 int main() {
