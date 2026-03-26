@@ -1,32 +1,93 @@
-//Write a program in C to perform basic operations such as addition, saddle point, inverse, magic 
-//square of two matrices. 
-//saddle point, inverse, magic square not done yet
-
 #include <stdio.h>
-int main() {
-    int a[2][2], b[2][2], c[2][2];
-    printf("Enter the first matrix ");
-    for (int i=0; i<2; i++) {
-        for (int j=0; j<2; j++) {
-            scanf("%d", &a[i][j]);
-        }
-    }
-    
-    printf("Enter the next matrix ");
-    for (int i=0; i<2; i++) {
-        for (int j=0; j<2; j++) {
-            scanf("%d", &b[i][j]);
-        }
-    }
+#define N 3
 
-    printf("Sum of matrices is:\n");
-    for (int i=0; i<2; i++) {
-        for (int j=0; j<2; j++) {
-            c[i][j] = a[i][j] + b[i][j];
-            printf("%d ", c[i][j]);
+void printMatrix(int m[N][N]) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%d ", m[i][j]);    
         }
         printf("\n");
     }
-    return 0;
 }
 
+void addMatrix(int a[N][N], int b[N][N]) {
+    int c[N][N];
+    printf("\nMatrix Addition:\n");
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            c[i][j] = a[i][j] + b[i][j];
+    printMatrix(c);
+}
+
+void saddlePoint(int a[N][N]) {
+    printf("\n--- Saddle Point ---\n");
+    int found = 0;
+    for (int i = 0; i < N; i++) {
+        int minVal = a[i][0], minCol = 0;
+        for (int j = 1; j < N; j++) {
+            if (a[i][j] < minVal) {
+                minVal = a[i][j];
+                minCol = j;
+            }
+        }
+        int isMax = 1;
+        for (int k = 0; k < N; k++) {
+            if (a[k][minCol] > minVal) {
+                isMax = 0;
+                break;
+            }
+        }
+        if (isMax) {
+            printf("Saddle point found: a[%d][%d] = %d\n", i, minCol, minVal);
+            found = 1;
+        }
+    }
+    if (!found)
+        printf("No saddle point found.\n");
+}
+
+void inverseMatrix(int d[2][2]) {       
+    printf("\n--- Matrix Inverse (2x2) ---\n");
+    int det = d[0][0] * d[1][1] - d[0][1] * d[1][0];
+    if (det == 0) {
+        printf("Matrix is singular - inverse does not exist.\n");
+        return;
+    }
+    float inv[2][2];
+    inv[0][0] =  (float) d[1][1] / det;
+    inv[0][1] = -(float) d[0][1] / det;
+    inv[1][0] = -(float) d[1][0] / det;
+    inv[1][1] =  (float) d[0][0] / det;
+
+    printf("Inverse matrix:\n");
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 2; j++)
+            printf("%8.3f ", inv[i][j]); //8 charchters with 3 numbers after decimal
+        printf("\n");
+    }
+}
+
+int main() {
+    int a[N][N], b[N][N], d[2][2];
+
+    printf("Enter first 3x3 matrix:\n");
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("Enter second 3x3 matrix:\n");
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            scanf("%d", &b[i][j]);
+
+    printf("Enter 2x2 matrix for inverse:\n");
+    for (int i = 0; i < 2; i++)
+        for (int j = 0; j < 2; j++)
+            scanf("%d", &d[i][j]);
+
+    addMatrix(a, b);
+    saddlePoint(a);
+    inverseMatrix(d);
+
+    return 0;
+}
