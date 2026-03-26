@@ -1,5 +1,5 @@
-//To calculate rank of student in exam.
-#include <stdio.h>
+//To calculate rank of student  in exam.
+#include <stdio.h> 
 int main() {
     float a,b,c,d,e;
     printf("Enter marks of 5 subjects out of 100: ");
