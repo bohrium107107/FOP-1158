@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h> 
-//Calculate length of string ii. String reversal iii. Equality check of two strings 
+ //Calculate length of string ii. String reversal iii. Equality check of two strings 
 //iii. Check palindrome iv. Check substring 
 int main() {
     char str1[50];
