@@ -1,4 +1,4 @@
-// Calculator with factorial and exponent
+//  Calculator with factorial and exponent
 #include <stdio.h>
 #include <math.h>
 int main(){
