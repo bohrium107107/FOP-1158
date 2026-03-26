@@ -1,4 +1,4 @@
-//Comput square, square root, cube and cube root of a number, factorial, check if its prime number, prime factors
+//Compute square, square root, cube and cube root of a number, factorial, check if it's prime number, prime factors
 #include <stdio.h>
 #include <math.h>
 int main() {
