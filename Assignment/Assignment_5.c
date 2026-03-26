@@ -67,6 +67,33 @@ void inverseMatrix(int d[2][2]) {
     }
 }
 
+void magicSquare(int a[N][N]) {
+    printf("\n--- Magic Square Check for first matrix---\n");
+
+    int target = a[0][0] + a[0][1] + a[0][2];  // first row sum = target
+
+    // check all rows
+    int r0 = a[0][0] + a[0][1] + a[0][2];
+    int r1 = a[1][0] + a[1][1] + a[1][2];
+    int r2 = a[2][0] + a[2][1] + a[2][2];
+
+    // check all columns
+    int c0 = a[0][0] + a[1][0] + a[2][0];
+    int c1 = a[0][1] + a[1][1] + a[2][1];
+    int c2 = a[0][2] + a[1][2] + a[2][2];
+
+    // check diagonals
+    int diag1 = a[0][0] + a[1][1] + a[2][2];    
+    int diag2 = a[0][2] + a[1][1] + a[2][0];    
+
+    if (r0==target && r1==target && r2==target &&
+        c0==target && c1==target && c2==target &&
+        diag1==target && diag2==target)
+        printf("It IS a magic square! Magic sum = %d\n", target);
+    else
+        printf("It is NOT a magic square.\n");
+}
+
 int main() {
     int a[N][N], b[N][N], d[2][2];
 
@@ -88,6 +115,7 @@ int main() {
     addMatrix(a, b);
     saddlePoint(a);
     inverseMatrix(d);
+    magicSquare(a);
 
     return 0;
 }
