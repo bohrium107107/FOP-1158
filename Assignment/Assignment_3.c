@@ -1,4 +1,4 @@
-//Write a program in C to generate multiplication tables.
+//Write a program  in C to generate multiplication tables.
 #include <stdio.h>
 int main() {
     int n,i;
