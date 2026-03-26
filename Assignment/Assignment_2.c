@@ -1,4 +1,4 @@
-//Write a menu driven program in C to implement the basic arithmetic operations. 
+//Write a  menu driven program in C to implement the basic arithmetic operations. 
 #include <stdio.h>
 int main(){
     float a;
