@@ -10,11 +10,24 @@ int gcd(int a, int b) {
     return a;
 }
 
+int scd(int a, int b){
+    for(int i = 2; i <= a && i <= b; i++)
+    {
+        if(a % i == 0 && b % i == 0)
+        {
+            return i;
+        }
+    }
+    return 1; // if no divisor other than 1
+}
+
+
 int lcm(int a, int b) {
     return (a * b) / gcd(a, b);
 }
 
 int main() {
+    
     int n;
     printf("How many numbers? ");
     scanf("%d", &n);
@@ -27,6 +40,7 @@ int main() {
     // start with first element, then keep updating
     int resultGCD = arr[0];
     int resultLCM = arr[0];
+    int resultSCD = arr[0];
 
     // gcd of 12,18,24,36
     //first 12,18 gcd = 6
@@ -35,10 +49,12 @@ int main() {
     for (int i = 1; i < n; i++) {
         resultGCD = gcd(resultGCD, arr[i]);   // calculate gcd in pairs 
         resultLCM = lcm(resultLCM, arr[i]);   // calculate lcm in pairs
-    }
+        resultSCD = scd(resultSCD, arr[i]);
 
     printf("GCD = %d\n", resultGCD);
     printf("LCM = %d\n", resultLCM);
+    printf("SCD = %d\n", resultSCD);
 
     return 0;
+}
 }

@@ -2,7 +2,7 @@
 #include <string.h>
 int main() {
     struct a{
-        int i;
+       long int i;
         char ch[2];
     };
     struct a key;
