@@ -1,9 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main()
 {
-    int rando = rand();
-    printf("%d is the random number", rando);
+    int i, n;
+
+    printf("How many random numbers to generate: ");
+    scanf("%d", &n);
+
+    srand(time(0));   // seed for random numbers
+
+    printf("Random numbers are:\n");
+
+    for(i = 0; i < n; i++)
+    {
+        printf("%d\n", rand());
+    }
     return 0;
+    
 }
