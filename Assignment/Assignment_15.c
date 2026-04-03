@@ -3,7 +3,7 @@
 #include <time.h>
 
 int main()
-{
+{ 
     int i, n;
 
     printf("How many random numbers to generate: ");
