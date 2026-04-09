@@ -1,0 +1,2 @@
+The fastest way to open or toggle the terminal is with a shortcut: 
+Windows/Linux: Press Ctrl + ` (the backtick key, usually next to the number 1).
