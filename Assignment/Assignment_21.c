@@ -5,14 +5,14 @@ int main() {
     FILE *source, *destination;
     char ch;
     
-    /* Open source file for reading */
+    
     source = fopen("source.txt", "r");
     if (source == NULL) {
-        printf("Error: Cannot open source file!<br>");
+        printf("Error: Cannot open source file!");
         return 1;
     }
     
-    /* Open destination file for writing */
+    
     destination = fopen("destination.txt", "w");
     if (destination == NULL) {
         printf("Error: Cannot create destination file!<br>");
@@ -20,14 +20,14 @@ int main() {
         return 1;
     }
     
-    /* Copy file character by character */
+    
     while ((ch = fgetc(source)) != EOF) {
         fputc(ch, destination);
     }
     
-    printf("File copied successfully!<br>");
+    printf("File copied successfully!");
     
-    /* Close both files */
+    
     fclose(source);
     fclose(destination);
     
